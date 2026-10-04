@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Score Evaluator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <!-- LEFT PANEL -->
+      <section class="panel">
+        <h2>Score Evaluator</h2>
+        <div class="content">
+          <p>Click Start, then answer the pop-up boxes.</p>
+          <button id="startBtn" type="button">Start</button>
+          <button id="againBtn" type="button" class="secondary" hidden>
+            Try again
+          </button>
+
+          <ul class="legend" aria-label="Grading scale">
+            <li class="Excellent">90-100 = Excellent</li>
+            <li class="Passed">75-89 = Passed</li>
+            <li class="Failed">Below 75 = Failed</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- RIGHT PANEL -->
+      <section class="panel">
+        <h2>Result</h2>
+        <div class="content">
+          <div id="result" aria-live="polite"></div>
+
+          <div class="history" id="historyBox" hidden>
+            <h3>Past results</h3>
+            <ul id="historyList"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="bg-picker">
+      <label for="bgInput">Background image:</label>
+      <input type="file" id="bgInput" accept="image/*" />
+      <button id="resetBg" type="button" class="secondary small">Reset</button>
+    </div>
+
+    <footer class="credit">Score Evaluator by Arvin Valdez | CCS114</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
